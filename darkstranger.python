@@ -1,0 +1,125 @@
+from urllib import response
+
+import mechanize
+
+import os
+
+import datetime
+
+import sys
+
+from time import sleep
+
+browser = mechanize.Browser()
+
+browser.set_handle_robots(False)
+
+cookies = mechanize.CookieJar()
+
+browser.set_cookiejar(cookies)
+
+browser.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36')]
+
+browser.set_handle_refresh(False)
+
+url = 'https://m.facebook.com/login.php'
+
+def openlink(msg4):
+
+    r = browser.open(msg4)
+
+def aclass():
+
+    browser.open(url)
+
+    browser.select_form(nr = 0)
+
+    browser.form['email'] = emailx
+
+    browser.form['pass'] = pwx
+
+    r = browser.submit()
+
+    browser.select_form(nr = 0)
+
+    msg1=str(input("➣Enter 2 step google code : "))
+
+    print(msg1)
+
+    browser.form['approvals_code'] = msg1
+
+    r=browser.submit()
+
+    browser.select_form(nr = 0)
+
+    browser.form['name_action_selected'] = ['save_device']
+
+    r = browser.submit()
+
+    
+
+    
+
+def poct(comment):
+
+    browser.select_form(nr = 0)
+
+    browser.form['comment_text'] = comment
+
+    r = browser.submit()
+
+print ("[=[ D4RK STR4NG3R RULL3X :D ]=]")
+
+print ("[=[ D4RK STR4NG3R B0IIS ST3V3 X M4X X L4MB X 4LVIN X 4NKIT H3R3 :D ]=]")
+
+print ("[=[ F4TH3R 0F 4LL RULL3X :D ]=]")
+
+emailx=str(input("➣Enter email : "))
+
+pwx =str(input("➣Enter pswrd : "))
+
+aclass()
+
+msg4=str(input("➣Enter post link : "))
+
+msg5=str(input("➣enter notpad file : "))
+
+f=open(msg5, 'r')
+
+lines = f.readlines()
+
+f.close()
+
+msg6= int(input("➣Enter TIME : "))
+
+os.system('clear')
+
+sys.stdout.flush()
+
+print('★彡[ᴅ4ʀᴋ ꜱᴛʀ4ɴɢ3ʀ ʀᴜʟʟ3x]彡★')
+
+count = 0
+
+
+
+while True:
+
+    for line in lines:
+
+        if len(line) > 3:
+
+            if count != 0:
+
+                sleep(msg6)
+
+            openlink(msg4)
+
+            poct(line)
+
+            print('C0MM3NT S3NT D0N3 - ', line)
+
+            count += 1
+
+            if count % 10 == 0:
+
+                sleep(1)
